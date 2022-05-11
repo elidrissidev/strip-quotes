@@ -12,8 +12,8 @@ describe('stripQuotes', () => {
   });
 
   it('should keep quotes in the middle of the string', () => {
-    const input = '"Tailwind is like a really nice pair of socks. You think, "okay, how good can a pair of socks be". Then you put socks on and you are like "%@#! these are socks"."';
-    const expectedOutput = 'Tailwind is like a really nice pair of socks. You think, "okay, how good can a pair of socks be". Then you put socks on and you are like "%@#! these are socks".';
+    const input = '"Tailwind is like a really nice pair of socks. You think, "okay, how good can a pair of socks be". Then you put socks on and you are like "%@#! these are socks""';
+    const expectedOutput = 'Tailwind is like a really nice pair of socks. You think, "okay, how good can a pair of socks be". Then you put socks on and you are like "%@#! these are socks"';
 
     assert.strictEqual(stripQuotes(input), expectedOutput);
   });
